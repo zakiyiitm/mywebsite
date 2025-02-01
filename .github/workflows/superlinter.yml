@@ -1,5 +1,15 @@
+name: Test Workflow
+
+on: 
+  push:  # Trigger the workflow on push
+    branches: 
+      - main  # You can change this to the branch you want
+  pull_request:  # Also trigger on pull requests to the main branch
+
 jobs:
   test:
+    runs-on: ubuntu-latest  # Specify the environment (e.g., Ubuntu)
+    
     steps:
       - name: 23ds3000040@ds.study.iitm.ac.in
         run: echo "Hello, world!"
