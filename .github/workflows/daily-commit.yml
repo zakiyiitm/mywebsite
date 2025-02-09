@@ -15,10 +15,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Configure Git
+      - name: Configure Git (23ds3000040@ds.study.iitm.ac.in)
         run: |
           git config --global user.name "GitHub Action"
-          git config --global user.email "23ds3000040@ds.study.iitm.ac.in"  # Ensure this email is correctly set
+          git config --global user.email "21******@ds.study.iitm.ac.in"
 
       - name: Make a Change
         run: |
@@ -29,7 +29,3 @@ jobs:
           git add last_run.txt
           git commit -m "Automated daily commit at $(date)" || echo "No changes to commit"
           git push
-
-      - name: Debug Git Log  # New step to check the latest commit info
-        run: |
-          git log -1 --pretty=format:'%an <%ae>'
